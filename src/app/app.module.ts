@@ -33,6 +33,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginModule } from './autenticacao';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
