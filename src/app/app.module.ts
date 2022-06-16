@@ -33,7 +33,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 import { AppComponent } from './app.component';
-import { LoginModule, LoginRoutingModule } from './autenticacao';
+import { LoginModule, LoginRoutingModule, CadastroPjModule, CadastroPjRoutingModule } from './autenticacao';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -46,7 +46,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     LoginModule,
     LoginRoutingModule,
-    
+    CadastroPjModule,
+    CadastroPjRoutingModule,
     AppRoutingModule
   ],
   providers: [],
