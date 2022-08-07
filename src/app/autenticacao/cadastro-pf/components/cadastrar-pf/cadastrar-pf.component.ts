@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { CnpjValidator, CpfValidator } from 'src/app/shared/validators';
+import { CadastroPf } from '../../models';
 
 @Component({
   selector: 'app-cadastrar-pf',
@@ -27,7 +28,7 @@ export class CadastrarPfComponent implements OnInit {
     this.form = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      senha: ['', [Validators.required], Validators.minLength[6]],
+      senha: ['', [Validators.required, Validators.minLength(6)]],
       cpf: ['', [Validators.required, CpfValidator]],
       cnpj: ['', [Validators.required, CnpjValidator]]
     })
@@ -38,7 +39,9 @@ export class CadastrarPfComponent implements OnInit {
       return false;
     }
 
-    alert(JSON.stringify(this.form.value));
+    const cadastroPf: CadastroPf = this.form.value;
+
+    alert(JSON.stringify(cadastroPf));
     return false;
   }
 
