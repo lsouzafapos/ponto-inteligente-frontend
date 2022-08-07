@@ -15,6 +15,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 
+import { CadastrarPfService } from './services';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +36,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     MatSnackBarModule,
     SharedModule,
     RouterModule
+  ],
+  providers: [
+    CadastrarPfService
   ]
 })
 export class CadastroPfModule { }
