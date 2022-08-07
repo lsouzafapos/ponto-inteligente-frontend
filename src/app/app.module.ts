@@ -29,6 +29,7 @@ import { MatSelect } from '@angular/material/select';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { AppComponent } from './app.component';
@@ -48,6 +49,9 @@ import { AppRoutingModule } from './app-routing.module';
     CadastroPjRoutingModule,
     CadastroPfModule,
     CadastroPfRoutingModule,
+    MatToolbarModule,
+    MatIconModule,
+    FlexLayoutModule,
     AppRoutingModule
   ],
   providers: [],
