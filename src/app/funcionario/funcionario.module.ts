@@ -14,8 +14,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
 import { MatCardModule } from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import { HttpUtilService, LancamentoService } from '../shared';
+import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
+import { HttpUtilService, LancamentoService, PtBrMatPaginatorIntl } from '../shared';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -38,11 +39,13 @@ import { HttpUtilService, LancamentoService } from '../shared';
     MatSortModule,
     MatCardModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    SharedModule
   ],
   providers:[
     HttpUtilService,
-    LancamentoService
+    LancamentoService,
+    { provide: MatPaginatorIntl, useClass: PtBrMatPaginatorIntl }
   ]
 })
 export class FuncionarioModule { }
