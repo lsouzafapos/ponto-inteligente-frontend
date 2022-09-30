@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -31,11 +31,11 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
-
 import { AppComponent } from './app.component';
 import { LoginModule, LoginRoutingModule, CadastroPjModule, CadastroPjRoutingModule, CadastroPfModule, CadastroPfRoutingModule } from './autenticacao';
 import { AppRoutingModule } from './app-routing.module';
 import { FuncionarioModule, FuncionarioRoutingModule } from './funcionario';
+import { AdminModule, AdminRoutingModule } from './admin';
 
 @NgModule({
   declarations: [
@@ -45,6 +45,7 @@ import { FuncionarioModule, FuncionarioRoutingModule } from './funcionario';
     BrowserModule,
     BrowserAnimationsModule,
     LoginModule,
+    FormsModule,
     LoginRoutingModule,
     CadastroPjModule,
     CadastroPjRoutingModule,
@@ -56,6 +57,10 @@ import { FuncionarioModule, FuncionarioRoutingModule } from './funcionario';
     FuncionarioModule,
     FuncionarioRoutingModule,
     MatTableModule,
+    AdminModule,
+    AdminRoutingModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     AppRoutingModule
   ],
   providers: [],
