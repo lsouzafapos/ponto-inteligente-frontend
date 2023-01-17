@@ -29,6 +29,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '../shared/shared.module';
 import { HttpUtilService, LancamentoService, PtBrMatPaginatorIntl, FuncionarioService } from '../shared';
 
+import { AdminGuard } from './services';
+
 @NgModule({
   declarations: [
     ListagemComponent,
@@ -65,7 +67,8 @@ import { HttpUtilService, LancamentoService, PtBrMatPaginatorIntl, FuncionarioSe
     MatPaginatorIntl,
     FuncionarioService,
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
-    { provide: MatPaginatorIntl, useClass: PtBrMatPaginatorIntl }
+    { provide: MatPaginatorIntl, useClass: PtBrMatPaginatorIntl },
+    AdminGuard
   ],
   entryComponents: [ ConfirmarDialog ]
 })
